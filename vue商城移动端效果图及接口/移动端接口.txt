@@ -1,0 +1,37 @@
+不需要token  vt.ossjk.com
+需要token    vt2.ossjk.com
+	修改的地方:
+		0)在vue.config.js 把target地址改成新ip地址
+		1)在request.js添加一个判断，判断code是否为1006(到刷新时间)
+		2)在home页面添加一个判断，判断到刷新时间后重新发送请求給后台
+
+http://vt.ossjk.com/goods
+
+
+
+---------------------------------------------------------------
+账号登录post  {测试账号：小明，测试密码：123456}
+http://vt.ossjk.com/login?name=name&pwd=pwd
+
+
+取得首页数据get
+http://vt.ossjk.com/goods/getIndexInfo
+
+
+获取商品详情信息的接口post  key:goodsId
+http://vt.ossjk.com/goods/getDetailGoodsInfo
+
+
+读取大类数据的接口get
+http://vt.ossjk.com/goods/getCategoryList
+
+
+读取小类的数据post key:categoryId
+http://vt.ossjk.com/goods/getCategorySubList
+
+
+根据类别获取商品列表post key:categorySubId
+http://vt.ossjk.com/goods/getGoodsListByCategorySubID
+
+图片地址改为：http://imgs.ossjk.cn
+
